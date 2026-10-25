@@ -41,7 +41,9 @@ header.site .wrap { display: flex; align-items: center; justify-content: space-b
 nav.top { display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 600; }
 nav.top a:not(.btn) { color: var(--muted); text-decoration: none; }
 nav.top a:not(.btn):hover { color: var(--ink); }
-@media (max-width: 760px) { nav.top a:not(.btn) { display: none; } }
+nav.top a { white-space: nowrap; }
+@media (max-width: 380px) { nav.top { gap: 10px; } nav.top .xs-hide { display: none; } nav.top .keep { text-transform: capitalize; } nav.top .btn.sm { padding: 8px 12px; } .logo { font-size: 17px; gap: 8px; } .logo img { width: 28px; height: 28px; } }
+@media (max-width: 760px) { nav.top { gap: 14px; font-size: 14px; } nav.top a:not(.btn):not(.keep) { display: none; } }
 
 /* buttons */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 12px 24px; border-radius: 16px; font: 700 16px/1.2 var(--font); text-decoration: none; border: 0; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
