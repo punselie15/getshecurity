@@ -237,3 +237,15 @@ article.post .tip { background: var(--soft); border-radius: 18px; padding: 18px 
 .app-art .dot-sos, .app-art .av { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; }
 .app-art .dot-sos { background: var(--pink); color: #fff; }
 .app-art .av { background: var(--soft); color: #c73a6c; }
+.jewel-band { padding-top: 8px; }
+.jewel-head { max-width: 560px; margin: 0 auto 22px; text-align: center; }
+.jewel-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); margin: 0 0 8px; }
+.jewel-head p { color: var(--muted); font-size: 15px; margin: 0; }
+.pieces.mini { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 720px; margin: 0 auto; }
+.pieces.mini .piece { margin: 0; border-radius: 22px; }
+.pieces.mini .art svg { width: 64%; height: 76%; }
+.pieces.mini figcaption { padding: 12px 14px 16px; display: flex; flex-direction: column; gap: 2px; text-align: center; }
+.pieces.mini figcaption b { font-size: 15px; }
+.pieces.mini figcaption span { color: var(--muted); font-size: 13px; line-height: 1.4; }
+@media (max-width: 860px) { .pieces.mini { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .pieces.mini { gap: 8px; } .pieces.mini figcaption span { display: none; } .pieces.mini figcaption { padding: 8px 6px 12px; } }
