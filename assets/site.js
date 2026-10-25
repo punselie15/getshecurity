@@ -5,7 +5,6 @@
   var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnaWhxd2VraGJ5aGhhZG9pemViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NDU3MzQsImV4cCI6MjEwODQyMTczNH0.jfeNmxsolNk9MHommYBRxAivYRblUr2WH9b4flQ0lzs";
   var GOAL = 1000;
   // PayPal link from the owner, e.g. "https://www.paypal.com/paypalme/NAME". Leave empty until it exists.
-  var PAYPAL = "";
 
   function api(path, body) {
     return fetch(SUPABASE + "/rest/v1/" + path, {
@@ -50,33 +49,5 @@
     });
   }
 
-  function donate() {
-    var box = document.getElementById("give");
-    if (!box) return;
-    var btn = document.getElementById("donateBtn"), other = document.getElementById("otherAmount"), note = document.getElementById("donateNote");
-    var amount = 10;
-    function update() {
-      if (!PAYPAL) return;
-      btn.href = PAYPAL.replace(/\/$/, "") + "/" + amount + "EUR";
-      btn.target = "_blank"; btn.rel = "noopener";
-      btn.removeAttribute("aria-disabled");
-      note.textContent = "Opens PayPal. You can change the amount there too.";
-    }
-    Array.prototype.forEach.call(box.querySelectorAll("[data-amount]"), function (b) {
-      b.addEventListener("click", function () {
-        amount = +b.getAttribute("data-amount"); other.value = "";
-        Array.prototype.forEach.call(box.querySelectorAll("[data-amount]"), function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-        update();
-      });
-    });
-    other.addEventListener("input", function () {
-      var v = Math.round(+other.value);
-      if (v >= 1) { amount = v; Array.prototype.forEach.call(box.querySelectorAll("[data-amount]"), function (x) { x.setAttribute("aria-pressed", "false"); }); update(); }
-    });
-    btn.addEventListener("click", function (e) { if (!PAYPAL) e.preventDefault(); });
-    if (!PAYPAL) btn.style.opacity = ".55";
-    update();
-  }
-
-  document.addEventListener("DOMContentLoaded", function () { showCount(); reserve(); donate(); });
+  document.addEventListener("DOMContentLoaded", function () { showCount(); reserve(); });
 })();
