@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+  // Phones go straight to their store, before anything else loads. Computers see the choices below.
+  (function () {
+    var ua = navigator.userAgent || "";
+    var apple = "https://apps.apple.com/app/id6826622812";
+    var play = "https://play.google.com/store/apps/details?id=io.github.punselie15.shecurity";
+    if (/android/i.test(ua)) location.replace(play);
+    else if (/iphone|ipad|ipod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) location.replace(apple);
+  })();
+</script>
+<title>Download Shecurity, the free women's safety app</title>
+<meta name="description" content="Download Shecurity for free. This link opens the App Store on iPhone and Google Play on Android.">
+<link rel="canonical" href="https://getshecurity.com/download/">
+<meta name="theme-color" content="#fbf8fa">
+<meta name="apple-itunes-app" content="app-id=6826622812">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shecurity">
+<meta property="og:title" content="Download Shecurity, the free safety app">
+<meta property="og:description" content="Your little helper for the moments that feel wrong. Free on iPhone and Android.">
+<meta property="og:url" content="https://getshecurity.com/download/">
+<meta property="og:image" content="https://shecurity.app/img/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .dl { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 16px; }
+  .dl .card { max-width: 440px; width: 100%; background: var(--surface); border-radius: 28px; box-shadow: var(--shadow); padding: 36px 24px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .dl .icon { width: 76px; height: 76px; border-radius: 20px; }
+  .dl h1 { font-size: 1.9rem; margin: 0; }
+  .dl p { margin: 0; color: var(--muted); }
+  .dl .stores { display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 6px; }
+  .dl .stores .btn { width: 100%; }
+  .dl small { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main class="dl"><div class="card">
+<img class="icon" src="/icon-192.png" alt="" width="76" height="76">
+<h1>Get Shecurity</h1>
+<p>Your little helper for the moments that feel wrong. Free forever, no ads.</p>
+<div class="stores">
+<a class="btn primary" href="https://apps.apple.com/app/id6826622812">Download on the App Store</a>
+<a class="btn pink" href="https://play.google.com/store/apps/details?id=io.github.punselie15.shecurity">Get it on Google Play</a>
+</div>
+<small>On your phone, this page opens the right store by itself. <a href="/">Learn more about Shecurity</a></small>
+</div></main>
+</body>
+</html>
